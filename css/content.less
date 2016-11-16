@@ -1,0 +1,333 @@
+.projects-section {
+  background-color: #626270;
+  padding-bottom: 50px;
+}
+
+.skills-section {
+	height: 500px;
+	background-color: #81CCCA;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	color: @background-light-yellow;
+
+	h2 {
+		margin-top: 40px;
+	}
+
+	#bricks {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+
+	#mario-playground {
+		max-width: 1080px;
+		height: 500px;
+		overflow: hidden;
+		position: relative;
+		margin: 0 auto;
+		left: 0;
+
+		@media (max-width: @screen-sm) {
+			overflow: visible;
+		}
+
+		#shawn-animated {
+			position: absolute;
+			width: 64px;
+			left: 10px;
+			bottom: 135px;
+		}
+
+		.question-block {
+			position: absolute;
+			bottom: 325px;
+			width: 48px;
+		}
+
+		#qblock1 {
+			left: 45px;
+		}
+
+		#qblock2 {
+			left: 110px;
+		}
+
+		#qblock3 {
+			left: 175px;
+		}
+
+		#cloud {
+			position: absolute;
+			bottom: 425px;
+			width: 110px;
+			left: 90px;
+		}
+
+		.design-icons {
+			position: absolute;
+			bottom: 375px;
+			width: 40px;
+			display: none;
+		}
+
+		#illustrator {
+			left: 48px;
+		}
+
+		#photoshop {
+			left: 114px;
+		}
+
+		#indesign {
+			left: 178px;
+		}
+
+		#sketch {
+			bottom: 430px;
+			left: 122px;
+		}
+
+		.tube-with-flower {
+			position: absolute;
+			bottom: 134px;
+			width: 96px;
+		}
+
+		#tflower1 {
+			left: 325px;
+		}
+
+		#tflower2 {
+			left: 425px;
+		}
+
+		#tflower3 {
+			left: 525px;
+		}
+
+		.fireball {
+			position: absolute;
+			bottom: 240px;
+			width: 32px;
+			display: none;
+		}
+
+		#fireball1 {
+			left: 318px;
+		}
+
+		#fireball2 {
+			left: 418px;
+		}
+
+		#fireball3 {
+			left: 518px;
+		}
+
+		.styling-icons {
+			position: absolute;
+			bottom: 142px;
+			width: 36px;
+			display: none;
+		}
+
+		#html5 {
+			left: 355px;
+		}
+
+		#css3 {
+			left: 455px;
+		}
+
+		#jquery {
+			width: 33px;
+			left: 557px;
+			bottom: 144px;
+		}
+
+		.frontend-icons {
+			position: absolute;
+		}
+
+		#flagpole {
+			width: 64px;
+			bottom: 127px;
+			left: 710px;
+		}
+
+		#flag {
+			width: 36px;
+			bottom: 350px;
+			left: 710px;
+		}
+
+		#angular {
+			width: 36px;
+			left: 700px;
+			bottom: 300px;
+			display: none;
+		}
+
+		#meteor {
+			width: 36px;
+			left: 753px;
+			bottom: 300px;
+			display: none;
+		}
+
+		.backend-icons {
+			position: absolute;
+			width: 36px;
+			display: none;
+		}
+
+		#castle {
+			width: 200px;
+			bottom: 124px;
+			left: 850px;
+			display: block;
+		}
+
+		#django {
+			bottom: 320px;
+			left: 890px;
+		}
+
+		#node {
+			bottom: 360px;
+			left: 930px;
+		}
+
+		#flask {
+			bottom: 320px;
+			left: 970px;
+		}
+
+	}
+}
+
+.garage-section {
+	height: 600px;
+	background-color: #D47479;
+	padding: 0 25% 0 25%;
+
+	@media (max-width: @screen-sm) {
+		height: 500px;
+		padding: 0 5% 0 5%;
+	}
+
+	.garage-category {
+		margin-top: 20px;
+		width: 100%;
+		overflow: hidden;
+
+		.garage-category-set {
+			margin: 0 7% 0 7%;
+			width: 11%;
+			float: left;
+			text-align: center;
+			color: @background-light-yellow;
+			font-size: 0.8em;
+
+			img {
+				width: 85%;
+			}
+
+			p {
+				text-transform: uppercase;
+				margin-top: 5px;
+			}
+
+			@media (max-width: @screen-sm) {
+				margin: 0 5% 0 5%;
+				width: 15%;
+			}
+		}
+	}
+
+	#enter-garage {
+		display: block;
+		margin: 60px 7% 0 7%;
+		background-color: #9B515E;
+		color: @background-light-yellow;
+		width: 84%;
+		text-transform: uppercase;
+		text-align: center;
+		height: 50px;
+
+		p {
+			.vertical-center;
+		}
+
+		@media (max-width: @screen-sm) {
+			margin: 60px 5% 0 5%;
+			width: 90%;
+		}
+
+		&:hover {
+			text-decoration: none;
+			background-color: darken(#9B515E, 5%);
+		}
+	}
+
+	.garage-gallery {
+		margin: 20px 7% 0 7%;
+		width: 84%;
+
+		img {
+			float: left;
+			width: 20%;
+		}
+	}
+}
+
+
+.about-section {
+	background-image: url("../img/shawn-profile/shawn-profile.png");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 0 10% 0 10%;
+	height: 600px;
+
+	@media (max-width: @screen-sm) {
+		padding: 0 10% 0 10%;
+		height: 300px;
+		background-size: auto 100%;
+	}
+
+	.self-introduction {
+		color: #D1CBBF;
+		font-weight: 300;
+		line-height: 2;
+
+		.about-item {
+			margin-bottom: 10px;
+			.about-heading {
+				background-color: rgba(20,20,20,0.6);
+				padding: 10px;
+				text-align: center;
+			}
+
+			.about-detail {
+				color: #9D9B94;
+			}
+		}
+
+		.about-resume {
+			color: inherit;
+			background-color: rgba(240, 239, 239, 0.09);
+			padding: 10px;
+			text-align: center;
+			display: block;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+

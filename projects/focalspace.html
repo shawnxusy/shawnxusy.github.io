@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Shawn Xu | FocalSpace </title>
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Niconne' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,400' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:700,300' rel='stylesheet' type='text/css'>
+
+		<!-- Core lib CSS -->
+		<link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="../libs/fontawesome/css/font-awesome.css">
+		<link rel="stylesheet" href="../libs/animate/animate.css">
+		<link rel="stylesheet" href="../libs/basic-slider/bjqs.css">
+
+		<!-- Custom CSS styles -->
+		<link href="../css/main.css" rel="stylesheet">
+	</head>
+
+	<body>
+	<div class="header">
+		<div class="nav-padding float-left no-mobile">
+		</div>
+
+		<div class="nav-item border-left float-left">
+			<a class="no-mobile" href="../#projects-position">PROJECTS</a>
+			<a href="../#projects-position"><img class="no-desktop" src="../img/icons/projects.png"></a>
+		</div>
+
+		<div class="nav-item border-left border-right float-left">
+			<a class="no-mobile" href="../#skills-position">SKILLS</a>
+			<a href="../#skills-position"><img class="no-desktop" src="../img/icons/skills.png"></a>
+		</div>
+
+		<div id="nav-center-icon" class="focalspace-background">
+			<a href="../index.html"><img src="../img/triango-logo-projects.png"></a>
+		</div>
+
+		<div class="nav-padding float-right no-mobile">
+		</div>
+
+		<div class="nav-item border-right float-right">
+			<a class="no-mobile" href="../#about-position">ABOUT</a>
+			<a href="../#about-position"><img class="no-desktop" src="../img/icons/about.png"></a>
+		</div>
+
+		<div class="nav-item border-right float-right">
+			<a class="no-mobile" href="../#garage-position">GARAGE</a>
+			<a href="../#garage-position"><img class="no-desktop" src="../img/icons/garage.png"></a>
+		</div>
+	</div>
+
+
+	<div class="promo-full-image focalspace-background" id="focalspace-promo">
+		<img src="../img/projects/focalspace/focalspace-logo.png" class="promo-logo animated fadeInDown" id="focalspace-logo">
+		<div class="promo-description">
+			<p>AN AR-BASED VIDEO CONFERENCING SYSTEM</p>
+		</div>
+	</div>
+
+	<!-- <div class="problem-statement" id="focalspace-problem">
+		<p>EMT: Emergency medical technician.<br>
+		They save millions every year, out of passion and compassion.<br>
+		Hardly anyone remembers or thanks them.</p>
+	</div> -->
+
+	<div class="project-brief row" id="focalspace-project-brief">
+		<div class="project-brief-content col-sm-6" id="focalspace-brief-content">
+			<h5 class="weight-400" id="focalspace-brief-title">Project Overview</h5>
+			<p class="weight-300">
+				FocalSpace introduces a video conferencing system that dynamically recognizes relevant activities and objects through depth sensing and hybrid tracking of multimodal cues, such as voice, gesture, and proximity to surfaces. FocalSpace uses this information to enhance users’ focus by diminishing the background through synthetic blur effects.<br><br>
+				<b>Date:</b> February 2012<br>
+				<b>Duration:</b> 3 months<br>
+				<b>Role:</b> Interaction design, Kinect development
+			</p>
+		</div>
+
+		<div class="project-brief-image col-sm-6">
+			<iframe id="focalspace-project-brief-video" src="//player.vimeo.com/video/66532724?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div>
+	</div>
+
+	<div class="project-figures" id="focalspace-figures">
+		<h1>{ Focus }</h1>
+		<p>only on what matters in a conference</p>
+	</div>
+
+	<div class="project-process" id="focalspace-process">
+		<div class="project-step grey-alter-1">
+			<div class="step-header">
+				<h5 class="weight-400">Step #1. Design system layout</h5>
+			</div>
+			<div class="step-content col-sm-12">
+				<p class="step-content-description">We decided to use both Kinects and Webcams to achieve the desired effect. The first step was to roughly sketch out how the overall system should work.</p>
+				<div id="focalspace-layout-slider">
+					<ul class="bjqs">
+						<li class="bjqs-slide">
+							<img src="../img/projects/focalspace/layout-1.jpg">
+							<p class="bjqs-caption">Kinects are used to interpret depth, detecting skeletons, also tracking audio.</p>
+						</li>
+						<li class="bjqs-slide">
+							<img src="../img/projects/focalspace/layout-2.jpg">
+							<p class="bjqs-caption">Webcams are used to detect activities, and present HD images when necessary</p>
+						</li>
+						<li class="bjqs-slide">
+							<img src="../img/projects/focalspace/layout-3.jpg">
+							<p class="bjqs-caption">What is transferred is an augmented video with focus and attention</p>
+						</li>
+						<li class="bjqs-slide">
+							<img src="../img/projects/focalspace/layout-4.jpg">
+							<p class="bjqs-caption">Initial overall system design</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="project-step grey-alter-2" id="focalspace-grey-2">
+			<div class="step-header">
+				<h5 class="weight-400">Step #2. Separate system into layers</h5>
+			</div>
+			<div class="step-content" id="focalspace-sketchcontent">
+				<p>FocalSpace is a rather complicated system. Once we have the idea and overall design, we started breaking down the system to different layers for separate implementation.</p>
+				<div id="focalspace-layer-image">
+					<img src="../img/projects/focalspace/layer.jpg">
+					<p>Decomposing the system into four layers</p>
+				</div>
+			</div>
+		</div> 
+		<div class="project-step grey-alter-3" id="focalspace-grey-3">
+			<div class="step-header">
+				<h5 class="weight-400">Step #3. Implementing core features </h5>
+			</div>
+			<div class="step-content" id="focalspace-implementation-content">
+				After system breakdown, we implemented the main features of FocalSpace, mostly working with depth and audio data from Kinect.
+				<div id="focalspace-implementation-slider">
+					<ul class="bjqs">
+						<li class="bjqs-slide">
+							<img src="../img/projects/focalspace/implementation-1.jpg">
+							<p class="bjqs-caption">Extracting body contour from Kinect</p>
+						</li>
+						<li class="bjqs-slide">
+							<img src="../img/projects/focalspace/implementation-2.jpg">
+							<p class="bjqs-caption">Zoom-in view for flipchart and tablets</p>
+						</li>
+						<li class="bjqs-slide">
+							<img src="../img/projects/focalspace/implementation-3.jpg">
+							<p class="bjqs-caption">Focused object is streamed to mobile devices in real time</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="project-quote" id="focalspace-project-quote">
+		<p>... Everyone designs who devises courses of action aimed at changing existing situations into preferred ones.&nbsp;&nbsp;&nbsp; - Herbert Simon</p>
+	</div>
+
+	<div class="project-outcome" id="focalspace-project-outcome">
+		<h5>Project Summary</h5>
+		<div class="row">
+			<p class="col-sm-5">By observing the space we inhabit as a richly layered, semantic object, FocalSpace can be valuable tool for other applications domains beyond video conferencing system. For future work, we consider adding eye-tracking as an additional feature, where focusing follows a user's gaze.</p>
+			<div class="col-sm-7" id="focalspace-outcome-frame">
+				<iframe id="focalspace-outcome-video" src="//player.vimeo.com/video/66613922?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+
+	<!-- Google Analytics -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-60182820-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+
+	 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="../libs/jquery/jquery-1.11.2.js"></script>
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <script src="../libs/bootstrap/js/bootstrap.js"></script>
+	    <script src="../libs/tweenmax/tweenmax.js"></script>
+	    <script src="../libs/scrollmagic/jquery.scrollmagic.js"></script>
+	    <script src="../libs/scrollmagic/jquery.scrollmagic.debug.js"></script>
+        <script type="text/javascript" src="../libs/jssor/jssor.js"></script>
+	    <script type="text/javascript" src="../libs/jssor/jssor.slider.js"></script>
+	    <script src="../libs/basic-slider/js/bjqs-1.3.js"></script>
+	    <script src="../js/focalspace.js"></script>
+	</body>
+</html>
