@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Team Drives</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="jquery.cropit.js" type="text/javascript"></script>
+
+    <style>
+
+    body{
+      background-color:rgba(0, 0, 0, 0.5);
+      
+
+    }
+    .image-editor {
+      margin-top:60px;
+    }
+    
+      .cropit-preview {
+        background-color: #f8f8f8;
+        background-size: cover;
+        border: 2px solid #2196F3;
+        margin-top: 7px;
+        width: 857px;
+        height: 96px;
+        position: absolute;
+        left:-24px;
+      }
+
+      .cropit-preview-image-container {
+        cursor: move;
+      }
+       .cropit-preview-background {
+        opacity: .2;
+        cursor: auto;
+      }
+
+      .image-size-label {
+        margin-top: 10px;
+      }
+
+      input, .export {
+        display: block;
+      }
+
+      button {
+        margin-top: 10px;
+      }
+      
+.cropit-image-input{
+ position: absolute;
+ right:24px;
+ top:24px;
+z-index: 1000;
+opacity: 0;
+width: 120px;
+}
+      
+    div {
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease;
+  -webkit-transition-delay: 0s;
+}
+
+/*
+The two classes below work together
+to center the content vertically and
+horizontally on the screen.
+*/
+
+.wrapperOutside {
+   display: table;
+   width: 100vw;
+   height: 100vh;
+}
+
+.wrapperInside {
+   display: table-cell;
+   text-align: center;
+   vertical-align: middle;
+}
+
+/*
+The attributes below style the css
+dialog window, and content.
+*/
+
+.dialogContainer {
+  /* Form */
+  position: relative;
+  width: 860px;
+  height: 340px;
+  /*
+  Drop Shadow
+  a. Horizontal shadow
+  b. Vertical shadow
+  c. Blur
+  d. Spread
+  e. Color
+  */
+  -webkit-box-shadow: 0 -2px 25px 0 rgba(0, 0, 0, 0.15), 0 13px 25px 0 rgba(0, 0, 0, 0.3);
+  background-color: #FFFFFF;
+  /* Internal padding */
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  /* External padding */
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0; 
+}
+
+.dialogContent { 
+  /* Form */   
+  width: auto;
+  height: auto;
+  background-color: #FFFFFF;
+  /* Corner radius */
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  border-bottom-right-radius:0;
+  border-bottom-left-radius:0;    
+  /* Internal padding */
+  padding-top: 21px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 12px;
+  /* External padding */
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;  
+
+  overflow: hidden;   
+}
+
+.dialogContentTitle {
+  width: auto;
+  /* Form */  
+  background-color: #FFFFFF; 
+  /* Typography */  
+  
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: rgba(0,0,0,.8);
+  line-height: 24px;  
+  text-align: left;
+  letter-spacing: 0.03px;
+  /* Internal padding */
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  /* External padding */
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;    
+}
+
+.dialogContentTitleAction{
+position: absolute;
+right:24px;
+top:16px;
+   width: auto;
+  background-color: #FFFFFF;
+  text-align: right;
+
+   display: inline-block;
+  height: 36px;
+  background-color: rgba(9,9,9,0);
+  /* Typography */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(33,150,243,0.9);
+  line-height: 36px;    
+  text-align: center;
+  letter-spacing: 0.4px;     
+
+}
+
+.dialogContentBody {
+  height:200px;
+  /* Typography */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(0,0,0,.5);
+  line-height: 24px;    
+  text-align: left;
+  letter-spacing: 0.03px;
+  /* Internal padding */
+  padding-top: 14px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;   
+  /* External padding */
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;       
+}
+
+.dialogActionBar {
+  /* Form */
+  width: auto;
+  height: 48px;
+  background-color: #FFFFFF;
+  text-align: right;
+
+  position: absolute;
+  right:0;
+  bottom: 0;
+  /* Corner radius */
+  border-top-left-radius:0;
+  border-top-right-radius:0;
+  border-bottom-right-radius:2px;
+  border-bottom-left-radius:2px;  
+  /* Internal padding */
+  padding-top: 0;
+  padding-left: 16px;
+  padding-right: 15px;
+  padding-bottom: 8px;  
+  /* External padding */
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;      
+}
+
+/*
+The attributes below style the
+hit target.
+*/
+
+.buttonTouchTarget {
+  display: inline-block;
+  background-color: rgba(0,0,0,0);
+  /* Remove grey background on link clicked in ios safari */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*
+The attributes below style the
+flat button based on the Google
+material design language.
+*/
+
+.buttonFlat {
+  /* Form */
+  display: inline-block;
+  height: 36px;
+  background-color: rgba(9,9,9,0);
+  /* Typography */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(33,150,243,0.9);
+  line-height: 36px;    
+  text-align: center;
+  letter-spacing: 0.4px;     
+  /* Internal padding */
+  padding-top: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 0;
+  /* External padding – Touch target size */
+  margin-top: 6px;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 6px;
+}
+.slider{
+ z-index: 1000;
+ position:absolute;
+ top:230px;
+ width: 200px;
+ left: calc(50% - 100px);;
+
+ 
+}
+.cropit-image-zoom-input{
+  width:200px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  
+ 
+}
+.tooltips{
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 150px;
+  height: 25px;
+  text-align: center;
+  color:white;
+  /* Typography */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 26px;    
+  text-align: center;
+  letter-spacing: 0.4px;   
+
+  position: absolute;
+  left: calc(50% - 75px);
+  top:160px;
+  z-index: 120;
+
+  border-radius: 2px;
+
+}
+    </style>
+  </head>
+
+
+  <body>
+
+    <!-- Content wrapper -->
+	<div class="wrapperOutside">
+		<div class="wrapperInside">
+			<!-- Dialog -->
+			<div class="dialogContainer">
+    			<!-- Dialog title and body -->
+    			<div class="dialogContent">
+    				<div class="dialogContentTitle">Custom cropping</div>
+            <!--<div class="dialogContentTitleAction">Change Photo</div>-->
+    				<div class="dialogContentBody">
+              <div class="tooltips">Drag to reposition</div>
+              
+
+                <div class="image-editor">
+                  <input type="file" class="cropit-image-input">
+                  <div class="dialogContentTitleAction">Change image</div>
+                  <div class="cropit-preview"></div>
+                 
+                 <div class="slider"> <input type="range" class="cropit-image-zoom-input"> </div>
+                  <!--<button class="rotate-ccw">Rotate counterclockwise</button>
+                  <button class="rotate-cw">Rotate clockwise</button>-->
+
+                  <!--<button class="export">Export</button>-->
+                </div>
+
+             </div>
+    				</div>
+   		 			<!-- Dialog action bar -->
+   		 			<div class="dialogActionBar">
+					<!-- Buttons -->
+					<a class="buttonTouchTarget" id="buttonOneTouchTarget" href="#">
+					<div class="buttonFlat" id="buttonOne" fit>DISCARD</div>
+					</a><!-- This comment removes 4px gap between buttons
+					--><a class="buttonTouchTarget" id="buttonTwoTouchTarget" href="#">
+					<div class="buttonFlat" id="buttonTwo">SAVE</div>
+					</a>
+    			</div>
+			</div>
+		</div>
+	</div>
+
+
+      
+    
+    
+    <script>
+      $(function() {
+        $('.image-editor').cropit({
+          imageBackground: true,
+          imageBackgroundBorderWidth: 50,
+          imageState: {
+            src: 'pets.jpg',
+             
+          },
+        });
+
+        $('.rotate-cw').click(function() {
+          $('.image-editor').cropit('rotateCW');
+        });
+        $('.rotate-ccw').click(function() {
+          $('.image-editor').cropit('rotateCCW');
+        });
+
+        $('.export').click(function() {
+          var imageData = $('.image-editor').cropit('export');
+          window.open(imageData);
+        });
+      });
+    </script>
+  </body>
+</html>
