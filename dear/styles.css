@@ -3,3 +3,9 @@ img {
   height: auto;
   margin: 10px 0;
 }
+
+.separater {
+  width: 100%;
+  height: 200px;
+  background-color: #333333;
+}
